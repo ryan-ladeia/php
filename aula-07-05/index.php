@@ -36,11 +36,29 @@
     </h2>
     <pre>
         <?php
-        $var =["Hubert" => 20, "Ariel" => 5, "Luis" => 6, "Ryan" => 10];
+        $var =["Hubert" => 3, "Ariel" => 5, "Luis" => 12, "Ryan" => -22];
         foreach($var as $chave => $valor){
-            if($valor>=10){
+            if($valor>=6){
+            
+            echo "Alunos Aprovados <br>";
             echo "O Aluno: $chave <br>";
             echo "Obteve a nota: $valor <br>";
+            } 
+            else if($valor <6 && $valor >= 4 ){
+            echo "Alunos Recuperação <br>";
+            echo "O Aluno: $chave <br>";
+            echo "Obteve a nota: $valor <br>";
+            } 
+            else if ($valor >10 || $valor <0 ){
+            echo "O Aluno: $chave <br>";
+            echo "Obteve a nota: $valor <br>";
+            echo "A nota é invalida <br>";
+            }
+            
+            else {
+                echo "Alunos Reprovados <br>";
+                echo " O Aluno: $chave <br>";
+                echo "Obteve a nota: $valor <br>";
             }
         }
         ?>
